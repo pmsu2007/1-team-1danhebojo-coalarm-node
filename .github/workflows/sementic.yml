@@ -1,0 +1,26 @@
+name: Develop Branch Semantic Release
+
+# main, develop 브랜치에서 Push 또는 PR이 발생할 때 릴리즈 실행
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+# GitHub Actions에서 자동으로 semantic-release 실행
+jobs:
+  semantic-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+      - run: npm install
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

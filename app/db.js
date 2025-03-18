@@ -1,9 +1,9 @@
-require("dotenv").config(); // .env 파일 로드
+require('dotenv').config(); // .env 파일 로드
 
-const { Pool } = require("pg");
-const { logger } = require("./logger");
-const { formatMessage } = require("./logger");
-const { messages } = require("./messages");
+const { Pool } = require('pg');
+const { logger } = require('./logger');
+const { formatMessage } = require('./logger');
+const { messages } = require('./messages');
 
 // PostgreSQL Connection
 const pool = new Pool({
@@ -14,11 +14,11 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
 });
 
-pool.on("connect", () => {
+pool.on('connect', () => {
   logger.info(formatMessage(messages.db.connect));
 });
 
-pool.on("error", (err) => {
+pool.on('error', () => {
   logger.error(formatMessage(messages.error.failConnectDB));
 });
 

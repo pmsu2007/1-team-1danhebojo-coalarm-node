@@ -32,5 +32,6 @@ module.exports = {
         'subject-full-stop': [2, 'never', '.'],
         'subject-min-length': [2, 'always', 5],
         'header-max-length': [0, 'always', 100],
+        'body-max-line-length': [0, 'always', 100],
     },
 };

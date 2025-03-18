@@ -26,7 +26,12 @@
   },
   "dependencies": {
     "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0"
+    "@commitlint/config-conventional": "^19.8.0",
+    "ccxt": "^4.4.68",
+    "dotenv": "^16.4.7",
+    "pg": "^8.14.1",
+    "pm2": "^6.0.5",
+    "winston": "^3.17.0"
   },
   "private": "false"
 }

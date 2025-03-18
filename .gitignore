@@ -38,3 +38,7 @@ out/
 
 /node_modules
 .env
+
+### log ###
+/logs
+*.log

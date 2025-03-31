@@ -42,3 +42,6 @@ out/
 ### log ###
 /logs
 *.log
+
+### shared ###
+/app/shared/

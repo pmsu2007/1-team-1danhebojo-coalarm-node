@@ -1,6 +1,20 @@
 {
   "apps": [
     {
+      "name": "load_symbol",
+      "script": "./app/worker/loadSymbolWorker.js",
+      "exec_mode": "fork",
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_restarts": 5,
+      "restart_delay": 5000,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "./logs/load_symbol_error.log",
+      "out_file": "./logs/load_symbol_out.log"
+    },
+
+    {
       "name": "binance_ticker",
       "script": "./app/worker/binanceTickerWorker.js",
       "exec_mode": "fork",
